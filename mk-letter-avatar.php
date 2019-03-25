@@ -3,7 +3,7 @@
  * Plugin Name: mk-letter-avatar
  * Plugin URI: https://mkblog.cn/
  * Description: 孟坤字母头像插件，如果评论者没有设置 Gravatar 头像，自动使用昵称首个字符作为头像
- * Version: 1.0.0
+ * Version: 1.0.1
  * Author: mengkun
  * Author URI: https://mkblog.cn/
  */
@@ -28,11 +28,13 @@ if(!function_exists('mk_letter_avatar')) {
         $src   = mk_get_html_tag_attribute( $avatar, 'src' );
         if(!$src) return $avatar;
         
+        $alt   = mk_get_html_tag_attribute( $avatar, 'alt',   $alt );
+        if(!$alt) return $avatar;
+        
         // 去除原始头像链接中的默认头像，改为输出 404
         $src   = preg_replace('/[\?\&]d[^&]+/is', '&d=404', $src);
         
         $class = mk_get_html_tag_attribute( $avatar, 'class', 'avatar avatar-'.$size.' photo' );
-        $alt   = mk_get_html_tag_attribute( $avatar, 'alt',   $alt );
         $title = mk_get_html_tag_attribute( $avatar, 'title', $alt );
         
         $avatar = '<img src="'.$src.'" alt="'.$alt.'" title="'.$title.'" class="'.$class.' mk-letter-avatar" height="'.$size.'" width="'.$size.'" onerror="onerror=null;src=\'\';src=mkLetterAvatar(alt,'.$size.')" />';
