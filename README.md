@@ -3,6 +3,8 @@ mk-letter-avatar
 
 ![](https://ws1.sinaimg.cn/large/006Xzox4ly1g1e591lzxzj31h30daaei.jpg)
 
+[![GitHub stars](https://img.shields.io/github/stars/mengkunsoft/mk-letter-avatar.svg)](https://github.com/mengkunsoft/mk-letter-avatar/stargazers) [![GitHub forks](https://img.shields.io/github/forks/mengkunsoft/mk-letter-avatar.svg)](https://github.com/mengkunsoft/mk-letter-avatar/network) [![GitHub issues](https://img.shields.io/github/issues/mengkunsoft/mk-letter-avatar.svg)](https://github.com/mengkunsoft/mk-letter-avatar/issues) [![GitHub license](https://img.shields.io/github/license/mengkunsoft/mk-letter-avatar.svg)](https://github.com/mengkunsoft/mk-letter-avatar/blob/master/LICENSE)
+
 mk-letter-avatar 是一个简单好用的 WordPress 字母头像插件。
 
 WordPress 默认采用的是 Gravatar 头像，但很多人可能没有设置 Gravatar 头像，因而只能显示出默认的头像。本插件就是将无头像用户的头像显示成动态生成的`昵称首字符`头像。
@@ -29,12 +31,17 @@ WordPress 默认采用的是 Gravatar 头像，但很多人可能没有设置 Gr
 
 ### 相关推荐
 -----
+[使用 LetterAvatar 实现纯前端生成字母头像](https://mkblog.cn/1886/)
+
 [mk-sitemap 站点地图插件](https://github.com/mengkunsoft/mk-sitemap)
 
 [mkBlog 简约主题](https://mkblog.cn/theme-mkblog/)
 
 ### 更新日志
 -----
+
+#### v1.0.2 `2019/4/5`
+- 不限制生成头像的颜色列表元素个数
 
 #### v1.0.1 `2019/3/25`
 - 如果没有 alt 信息，直接返回默认头像
