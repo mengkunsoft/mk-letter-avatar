@@ -10,7 +10,7 @@ mk-letter-avatar 是一个简单好用的 WordPress 字母头像插件。
 WordPress 默认采用的是 Gravatar 头像，但很多人可能没有设置 Gravatar 头像，因而只能显示出默认的头像。本插件就是将无头像用户的头像显示成动态生成的`昵称首字符`头像。
 
 
-说道字母头像，这里不得不提一款很出名的插件：[WP First Letter Avatar](https://wordpress.org/plugins/wp-first-letter-avatar/)，本插件与之不同的是字母头像的生成完全是在`前端`实现的，整个插件大小只有不到 5kb。插件启用后不会在服务器产生任何缓存文件，纯净好用！
+说到字母头像，这里不得不提一款很出名的插件：[WP First Letter Avatar](https://wordpress.org/plugins/wp-first-letter-avatar/)，本插件与之不同的是字母头像的生成完全是在`前端`实现的，整个插件大小只有不到 5kb。插件启用后不会在服务器产生任何缓存文件，纯净好用！
 
 
 本插件无需任何设置，直接在 WordPress 后台上传并启用即可。
@@ -39,6 +39,9 @@ WordPress 默认采用的是 Gravatar 头像，但很多人可能没有设置 Gr
 
 ### 更新日志
 -----
+
+#### v1.0.3 `2019/4/14`
+- 修复头像链接被 `htmlspecialchars` 后无效的 BUG（感谢 @sy-records 提交反馈）
 
 #### v1.0.2 `2019/4/5`
 - 不限制生成头像的颜色列表元素个数
