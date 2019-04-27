@@ -3,7 +3,7 @@
  * Plugin Name: mk-letter-avatar
  * Plugin URI: https://github.com/mengkunsoft/mk-letter-avatar
  * Description: 孟坤字母头像插件，如果评论者没有设置 Gravatar 头像，自动使用昵称首个字符作为头像
- * Version: 1.0.3
+ * Version: 1.0.4
  * Author: mengkun
  * Author URI: https://mkblog.cn/
  */
@@ -54,7 +54,7 @@ if(!function_exists('mk_letter_avatar')) {
          * Create Letter avatar based on Initials
          * based on https://gist.github.com/leecrossley/6027780
          */
-        ?><style>.mk-letter-avatar[src=""]{visibility: hidden;}</style><script>(function(e,h){window.mkLetterAvatar=function(a,b,f){b=b||60;var g="<?php echo implode(' ', $AVATAR_COLORS); ?>".split(" ");a=String(a||"").split(" ");a=1==a.length?a[0]?a[0].charAt(0):"?":a[0].charAt(0)+a[1].charAt(0);e.devicePixelRatio&&(b*=e.devicePixelRatio);var k=(("?"==a?72:a.charCodeAt(0))-64)%g.length;var c=h.createElement("canvas");c.width=b;c.height=b;var d=c.getContext("2d");d.fillStyle=f?f:g[k-1];d.fillRect(0,0,c.width,c.height);d.font=Math.round(c.width/2)+"px 'Microsoft Yahei'";d.textAlign="center";d.fillStyle="#fff";d.fillText(a,b/2,b/1.5);return c.toDataURL()}})(window,document);</script><?php
+        ?><style>.mk-letter-avatar[src=""]{visibility: hidden;}</style><script>(function(a,b){window.mkLetterAvatar=function(d,l,j){d=d||"";l=l||60;var h="<?php echo implode(' ', $AVATAR_COLORS); ?>".split(" "),f,c,k,g,e,i;f=String(d);f=f.replace(/\uD83C[\uDF00-\uDFFF]|\uD83D[\uDC00-\uDE4F]/g,"");f=f?f.charAt(0):"?";if(a.devicePixelRatio){l=(l*a.devicePixelRatio)}c=(f=="?"?72:f.charCodeAt(0))-64;k=c%h.length;g=b.createElement("canvas");g.width=l;g.height=l;e=g.getContext("2d");e.fillStyle=j?j:h[k-1];e.fillRect(0,0,g.width,g.height);e.font=Math.round(g.width/2)+"px 'Microsoft Yahei'";e.textAlign="center";e.fillStyle="#fff";e.fillText(f,l/2,l/1.5);i=g.toDataURL();g=null;return i}})(window,document);</script><?php
     }
     add_action( 'wp_head', 'mk_letter_avatar_js' );
     
