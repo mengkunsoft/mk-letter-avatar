@@ -72,7 +72,7 @@ if(!function_exists('mk_letter_avatar')) {
             if (!filter_var($id_or_email, FILTER_VALIDATE_EMAIL)) { // 不是邮箱，当做用户名
                 return $id_or_email;
             } else {
-                $user = get_user_by('email', $email);
+                $user = get_user_by('email', $id_or_email);
             }
         }
         // 尝试从用户对象中取出用户名
